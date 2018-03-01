@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SumaNumeros.iml" filepath="$PROJECT_DIR$/SumaNumeros.iml" />
+      <module fileurl="file://C:\Users\Carlos\AndroidStudioProjects\SumaNumeros-2.0\SumaNumeros.iml" filepath="C:\Users\Carlos\AndroidStudioProjects\SumaNumeros-2.0\SumaNumeros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SumaNumeros-2.0.iml" filepath="$PROJECT_DIR$/SumaNumeros-2.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

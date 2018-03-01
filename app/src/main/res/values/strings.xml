@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SumaNumeros</string>
+    <string name="into_number">Número1</string>
+    <string name="into_number2">Número2</string>
+    <string name="button_send">Suma</string>
+    <string name="sumar">Sumar</string>
 </resources>
+

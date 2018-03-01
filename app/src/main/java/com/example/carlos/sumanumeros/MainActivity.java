@@ -1,36 +1,41 @@
 package com.example.carlos.sumanumeros;
 
-import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatEditText;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-    AppCompatEditText n1 , n2;
-    Button botonsumar;
-    TextView resultado;
-    @SuppressLint("WrongViewCast")
+    public static final String EXTRA_MESSAGE2 = "Número 1";
+    public static final String EXTRA_MESSAGE = "Número 2";
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        n1=(AppCompatEditText)findViewById(R.id.et1);
-        n2=(AppCompatEditText)findViewById(R.id.et2);
-        resultado=(TextView)findViewById(R.id.resultado);
-        botonsumar=(Button)findViewById(R.id.boton);
-        botonsumar.setOnClickListener(this);
+    }
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+
+        EditText editText = findViewById(R.id.et1);
+        String message = editText.getText().toString();
+
+        EditText editText2 = findViewById(R.id.et2);
+        String message2 = editText2.getText().toString();
+
+        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra(EXTRA_MESSAGE2, message2);
+        startActivity(intent);
     }
 
-    @Override
-    public void onClick(View v) {
-        int valor1 = Integer.parseInt(n1.getText().toString());
-        int valor2 = Integer.parseInt(n2.getText().toString());
-        int suma = valor1 + valor2;
-        resultado.setText(suma+"");
 
-    }
 }
+
+
+
+

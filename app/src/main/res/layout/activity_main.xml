@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2000"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.example.carlos.sumanumeros.MainActivity">
 
     <TextView
@@ -64,29 +68,15 @@
         tools:ignore="MissingConstraints"
         tools:text="Número2" />
 
-    <TextView
-        android:id="@+id/resultado"
-        android:layout_width="wrap_content"
-        android:layout_height="52dp"
-        android:layout_below="@+id/boton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="Resultado"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton"
-        app:layout_constraintVertical_bias="0.62" />
-
     <Button
         android:id="@+id/boton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv2"
+        android:layout_below="@+id/et2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="Sumar"
+        android:layout_marginTop="48dp"
+        android:onClick="sendMessage"
+        android:text="@string/sumar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et2"
         tools:ignore="MissingConstraints" />
